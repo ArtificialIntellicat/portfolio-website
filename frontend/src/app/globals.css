@@ -1,0 +1,198 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Basic Settings */
+:root {
+  --background-color: #f0f4f8;
+  --text-color: #414b5c;
+}
+
+/* Dark Theme */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #333;
+    --text-color: #fff;
+  }
+}
+
+.dark {
+  --background-color: #333;
+  --text-color: #d8d8d8;
+}
+
+.dark .text-gray-800 {
+  @apply text-gray-300;
+}
+
+.dark .text-gray-600 {
+  @apply text-gray-400;
+}
+
+.dark .timeline-content,
+.dark .timeline-description {
+  color: #ccc;
+}
+
+.dark .contact-button {
+  background-color: #4e56a7;
+}
+
+.dark .contact-button:hover {
+  background-color: #7279bd;
+}
+
+.dark .skill-node {
+  background-color: #4e56a7;
+}
+
+.dark .hover-effect:hover {
+  color: #292d57;
+}
+
+/* More Basic Settings */
+
+@font-face {
+  font-family: 'SciFly-Sans';
+  src: url('/fonts/SciFly-Sans.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  color: var(--text-color);
+  background-color: var(--background-color);
+  font-family: 'Raleway', sans-serif;
+  text-align: justify;
+  font-size: 16px;
+}
+
+.hover-effect {
+  transition: color 0.5s;
+}
+
+.hover-effect:hover {
+  color: #374075;
+}
+
+.content-section {
+  max-width: 768px;
+  margin: auto;
+  padding: 10px;
+  text-align: justify;
+}
+
+/* Headings */
+.h2-container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: lowercase;
+  color: #7188d1;
+  padding: 0 10px;
+  position: relative;
+  display: inline-block;
+  font-family: 'SciFly-Sans', sans-serif;
+}
+
+.h2-container::before,
+.h2-container::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 2px;
+  background-color: #8FA1DB;
+}
+
+.h2-container::before {
+  left: 0;
+  right: 50%;
+  margin-right: 90px;
+}
+
+.h2-container::after {
+  right: 0;
+  left: 50%;
+  margin-left: 90px;
+}
+
+h3 {
+  position: relative;
+  font-size: 20px;
+  font-weight: bold;
+  color: #8FA1DB;
+  /* border-bottom: 2px solid #8FA1DB; */
+  text-transform: lowercase;
+  padding-left: 27px;
+  margin: 25px 0 10px 0;
+  line-height: 0.65;
+}
+
+h3::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 23px;
+  height: 23px;
+  background-image: url("data:image/svg+xml,%3Csvg width='23' height='23' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xml:space='preserve' overflow='hidden'%3E%3Cg transform='translate(-325 -90)'%3E%3Cpath d='M335.602 94.7917 332.607 94.7917 337.638 101.5 332.607 108.208 335.602 108.208 340.633 101.5 335.602 94.7917Z' fill='%238FA1DB'/%3E%3Cpath d='M326.857 108.208 329.852 108.208 334.883 101.5 329.852 94.7917 326.857 94.7917 331.888 101.5 326.857 108.208Z' fill='%238FA1DB'/%3E%3Cpath d='M341.352 94.7917 338.357 94.7917 343.388 101.5 338.357 108.208 341.352 108.208 346.383 101.5 341.352 94.7917Z' fill='%238FA1DB'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* Experience Timeline */
+.skill-node {
+  display: inline-block;
+  background-color: #7188d1;
+  color: white;
+  border-radius: 15px;
+  padding: 3px 10px;
+  margin: 5px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* Contact Button */
+.contact-button {
+  background-color: #7188d1;
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: 'SciFly-Sans', sans-serif;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  margin: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-transform: lowercase;
+}
+
+.contact-button:hover {
+  background-color: #4A569D;
+}
+
+/* SVG Filters */
+.white-filter {
+  filter: invert(100%) sepia(0%) saturate(7476%) hue-rotate(113deg) brightness(108%) contrast(100%);
+}
+
+.icon-hover:hover {
+  filter: invert(60%) sepia(9%) saturate(3403%) hue-rotate(194deg) brightness(60%) contrast(91%);
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
