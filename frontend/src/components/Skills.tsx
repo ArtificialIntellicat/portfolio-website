@@ -56,18 +56,17 @@ const Skills = () => {
         type: 'bar',
         data: prepareChartData(),
         options: {
-          indexAxis: 'x', // Correct axis
+          indexAxis: 'x',
           scales: {
             y: {
               beginAtZero: true,
               max: 5,
               ticks: {
+                color: "#9fa6d2",
                 stepSize: 1,
                 font: {
                     weight: 'bold',
                     size: 14,
-                    family: "'Raleway', sans-serif",
-                    color: '#374075'
                   },
                 callback: function(value) {
                   if (value % 1 === 0) {
@@ -85,13 +84,12 @@ const Skills = () => {
             },
             x: {
               ticks: {
+                color: "#9fa6d2",
                 maxRotation: 45,
                 minRotation: 45,
                 font: {
                     weight: 'bold',
                     size: 14,
-                    family: "'Raleway', sans-serif",
-                    color: '#374075'
                   }
               },
               grid: {
@@ -104,7 +102,7 @@ const Skills = () => {
               display: false
             }
           },
-          maintainAspectRatio: false
+          maintainAspectRatio: false, 
         }
       });
 
