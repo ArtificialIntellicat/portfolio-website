@@ -143,9 +143,9 @@ const ExperienceSelection = () => {
   return (
     <section id="cv">
       <div className="category-selector mt-5">
-        <button onClick={() => setActiveCategory('professional')} className="hover-effect dark:hover:text-[#d9dff3] text-xl">professional</button>
-        <button onClick={() => setActiveCategory('academic')} className="hover-effect dark:hover:text-[#d9dff3] text-xl">academic</button>
-        <button onClick={() => setActiveCategory('international')} className="hover-effect dark:hover:text-[#d9dff3] text-xl">international</button>
+        <button onClick={() => setActiveCategory('professional')} className="text-[#8FA1DB] hover-effect dark:hover:text-[#d9dff3] text-xl">professional</button>
+        <button onClick={() => setActiveCategory('academic')} className="text-[#8FA1DB] hover-effect dark:hover:text-[#d9dff3] text-xl">academic</button>
+        <button onClick={() => setActiveCategory('international')} className="text-[#8FA1DB] hover-effect dark:hover:text-[#d9dff3] text-xl">international</button>
       </div>
       <div className={`timeline ${activeCategory === 'professional' ? 'show' : ''}`}>
         {activeCategory === 'professional' && renderTimeline(professionalData)}
@@ -156,13 +156,15 @@ const ExperienceSelection = () => {
       <div className={`timeline ${activeCategory === 'international' ? 'show' : ''}`}>
         {activeCategory === 'international' && renderTimeline(internationalData)}
       </div>
+      <div className='mt-20 flex flex-col items-center'>
+        <a href="/toni_helesic_lebenslauf.pdf" target="_blank" className="download-cv inline-flex items-center justify-center">View my CV</a>
+      </div>
       <style jsx global>{`
         /* Timeline Styles */
         .timeline {
           position: relative;
           transition: opacity 2s ease;
           opacity: 0;
-          margin-bottom: 100px;
         }
         
         .timeline.show {
@@ -225,7 +227,6 @@ const ExperienceSelection = () => {
           background: none;
           border: none;
           font-weight: bold;
-          color: #8FA1DB;
           margin: 0 10px;
           cursor: pointer;
         }

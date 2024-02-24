@@ -34,11 +34,11 @@
   color: #ccc;
 }
 
-.dark .contact-button {
+.dark .contact-button, .download-cv {
   background-color: #4e56a7;
 }
 
-.dark .contact-button:hover {
+.dark .contact-button:hover, .download-cv:hover {
   background-color: #7279bd;
 }
 
@@ -48,6 +48,16 @@
 
 .dark .hover-effect:hover {
   color: #292d57;
+}
+
+.dark blockquote {
+  border-left: 6px solid #546fc8;
+  background-color: #2b2f3f;
+  color: #7f90c4;
+}
+
+.dark .hover-effect:hover {
+  color: #919acb;
 }
 
 /* More Basic Settings */
@@ -96,6 +106,7 @@ h2 {
   text-transform: lowercase;
   color: #7188d1;
   padding: 0 10px;
+  margin-bottom: 15px;
   position: relative;
   display: inline-block;
   font-family: 'SciFly-Sans', sans-serif;
@@ -160,6 +171,16 @@ h3::before {
   font-weight: bold;
 }
 
+/* Blog Posts */
+blockquote {
+  border-left: 6px solid #8FA1DB;
+  background-color: #e8ebf7;
+  padding: 10px 15px;
+  margin: 25px 0;
+  color: #7f90c4;
+  font-weight: bold;
+}
+
 /* Contact Button */
 .contact-button {
   background-color: #7188d1;
@@ -182,6 +203,28 @@ h3::before {
   background-color: #4A569D;
 }
 
+/* Download CV */
+.download-cv {
+  background-color: #7188d1;
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  font-family: 'SciFly-Sans', sans-serif;
+  padding: 7px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  margin: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-transform: lowercase;
+}
+
+.download-cv:hover {
+  background-color: #4A569D;
+}
+
 /* SVG Filters */
 .white-filter {
   filter: invert(100%) sepia(0%) saturate(7476%) hue-rotate(113deg) brightness(108%) contrast(100%);
@@ -189,6 +232,10 @@ h3::before {
 
 .icon-hover:hover {
   filter: invert(60%) sepia(9%) saturate(3403%) hue-rotate(194deg) brightness(60%) contrast(91%);
+}
+
+.blue-filter {
+  filter: brightness(0) saturate(100%) invert(59%) sepia(21%) saturate(683%) hue-rotate(188deg) brightness(106%) contrast(86%);
 }
 
 @layer utilities {

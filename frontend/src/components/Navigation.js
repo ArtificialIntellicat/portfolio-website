@@ -1,5 +1,6 @@
 'use client';
 import { useState } from 'react';
+import { useRouter } from 'next/router';
 import Link from 'next/link';
 import EmailIcon from './EmailIcon';
 import GitHubIcon from './GitHubIcon';
@@ -10,6 +11,18 @@ import { IoClose } from "react-icons/io5";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  // Handle navigation links for index.js and blog entry
+  const router = useRouter();
+
+  const handleNavigation = (anchor) => {
+    const destination = `/${anchor}`;
+    if (router.pathname !== '/') {
+      router.push(destination);
+    } else {
+      document.querySelector(anchor).scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <header className={`fixed top-0 w-full z-50 fixed top-0 bg-[#5470c8] dark:bg-[#4e56a7]`}>
@@ -30,11 +43,11 @@ const Navigation = () => {
          {/* Mobile Menu (Visible when menu is open) */}
          <div className={`absolute top-full left-0 w-full bg-[#5470c8] dark:bg-[#4e56a7] md:hidden ${isMenuOpen ? 'block' : 'hidden'}`}>
           <div className="flex flex-col items-start py-2">
-            <Link href="#intro" className="hover-effect py-1 px-2">Home</Link>
-            <Link href="#about" className="hover-effect py-1 px-2">About Me</Link>
-            <Link href="#cv" className="hover-effect py-1 px-2">CV</Link>
-            <Link href="#portfolio" className="hover-effect py-1 px-2">Portfolio</Link>
-            <Link href="#blog" className="hover-effect py-1 px-2">Blog</Link>
+            <a href="/" onClick={() => window.scrollTo(0, 0)} className="hover-effect py-1 px-2 cursor-pointer">Home</a>
+            <a onClick={() => handleNavigation('#about')} className="hover-effect py-1 px-2 cursor-pointer">About Me</a>
+            <a onClick={() => handleNavigation('#cv')} className="hover-effect py-1 px-2 cursor-pointer">CV</a>
+            <a onClick={() => handleNavigation('#portfolio')} className="hover-effect py-1 px-2 cursor-pointer">Portfolio</a>
+            <a onClick={() => handleNavigation('#blog')} className="hover-effect py-1 px-2 cursor-pointer">Blog</a>
           </div>
           <div className="flex justify-left py-2 px-2 gap-4">
             <EmailIcon className="icon-hover" />
@@ -47,11 +60,11 @@ const Navigation = () => {
         <div className="flex-grow justify-center hidden md:flex">
           <div className="flex basis-1/4"></div>
           <div className="flex basis-1/2 justify-center gap-4">
-            <Link href="#intro" className="hover-effect">Home</Link>
-            <Link href="#about" className="hover-effect">About Me</Link>
-            <Link href="#cv" className="hover-effect">CV</Link>
-            <Link href="#portfolio" className="hover-effect">Portfolio</Link>
-            <Link href="#blog" className="hover-effect">Blog</Link>
+            <a href="/" onClick={() => window.scrollTo(0, 0)} className="hover-effect cursor-pointer">Home</a>
+            <a onClick={() => handleNavigation('#about')} className="hover-effect cursor-pointer">About Me</a>
+            <a onClick={() => handleNavigation('#cv')} className="hover-effect cursor-pointer">CV</a>
+            <a onClick={() => handleNavigation('#portfolio')} className="hover-effect cursor-pointer">Portfolio</a>
+            <a onClick={() => handleNavigation('#blog')} className="hover-effect cursor-pointer">Blog</a>
           </div>
           <div className="flex basis-1/4 gap-4 justify-end">
             <EmailIcon className="icon-hover" />

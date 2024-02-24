@@ -1,12 +1,24 @@
-import React, { useState } from 'react';
-import Layout from '../app/Layout';
-import Image from 'next/image';
+import React, { useState } from 'react'
+import Layout from '../app/Layout'
+import Image from 'next/image'
+import ContactButton from '../components/ContactButton'
 import Skills from '../components/Skills'
-import ExperienceSelection from '../components/ExperienceSelection';
+import ExperienceSelection from '../components/ExperienceSelection'
 import FunSkills from '../components/FunSkills'
-import ContactButton from '../components/ContactButton';
+import PortfolioGallery from '../components/PortfolioGallery'
+import Blog from '../components/Blog'
+import { getSortedPostsData } from '../lib/posts';
 
-export default function Home() {
+export async function getStaticProps() {
+  const allPostsData = getSortedPostsData();
+  return {
+    props: {
+      allPostsData,
+    },
+  };
+}
+
+export default function Home({ allPostsData }) {
   const [mode, setMode] = useState('serious'); // CV display mode selection
 
   return (
@@ -26,7 +38,7 @@ export default function Home() {
         </div>
       </section>
 
-        <section id="about">
+        <section id="about" className='anchor-offset'>
         <div className="h2-container"><h2>&#123; About Me &#125;</h2></div>
         <p className="mb-10">
             Embarking on the path of machine learning, I bring a fusion of analytical prowess and cultural empathy. My journey is defined by a relentless pursuit of knowledge and innovation, guided by the belief that technology, when harmonized with humanistic understanding, can unveil transformative solutions.
@@ -69,7 +81,7 @@ export default function Home() {
         <ContactButton />
       </section>
 
-        <section id="cv" className='mt-10'>
+        <section id="cv" className='mt-10 anchor-offset'>
         <div className="h2-container"><h2>&#123; CV &#125;</h2></div>
         <div className='text-[#8fa1db] font-bold inline-block flex items-center justify-center mt-4 mb-10'>
           choose your mode&#160;&#160;&#62;&#62;
@@ -93,14 +105,14 @@ export default function Home() {
         )}
         </section>
 
-        <section id="portfolio" className='mt-10'>
+        <section id="portfolio" className='mt-10 anchor-offset'>
         <div className="h2-container"><h2>&#123; Portfolio &#125;</h2></div>
-          <p>coming soon</p>
+          <PortfolioGallery />
         </section>
 
-        <section id="blog" className='mt-10'>
+        <section id="blog" className='mt-10 anchor-offset'>
         <div className="h2-container py-5"><h2>&#123; Blog &#125;</h2></div>
-          <p>coming soon</p>
+          <Blog allPostsData={allPostsData} />
         </section>
       </section>
       <style jsx>{`
@@ -118,6 +130,14 @@ export default function Home() {
             
             .mode-toggle.fun {
               transform: translateX(100%);
+            }
+            .anchor-offset:before {
+              content: '';
+              display: block;
+              height: 50px;
+              margin-top: -50px;
+              visibility: hidden;
+              pointer-events: none;
             }         
         `}</style>
     </Layout>
