@@ -854,11 +854,11 @@ video {
   color: #ccc;
 }
 
-.dark .contact-button, .download-cv {
+.dark .contact-button, .dark .download-cv {
   background-color: #4e56a7;
 }
 
-.dark .contact-button:hover, .download-cv:hover {
+.dark .contact-button:hover, .dark .download-cv:hover {
   background-color: #7279bd;
 }
 
