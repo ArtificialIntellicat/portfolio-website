@@ -160,6 +160,7 @@ const FunSkills = () => {
   // Render the component
   return (
     <div className="skills-game">
+      <p className='text-center'>A text-based interactive cv adventure is waiting to be born here ...</p>
       <div className="timeline">
         {milestones.map(milestone => (
           <button key={milestone.year} onClick={() => handleTimelineProgress(milestone.year)}>

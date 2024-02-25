@@ -26,13 +26,12 @@ const Home: React.FC<HomeProps> = ({ allPostsData }) => {
       <section className="content-section">
       <section id="intro" className="text-center py-4">
         <div className="flex flex-col items-center gap-8">
-          <h1 className="text-5xl font-bold text-[#8095d6] toni">Toni Helesic</h1>
+          <h1 className="text-5xl font-bold text-[#8095d6] toni">Hey, I'm Toni.</h1>
           <div className="rounded-full overflow-hidden w-52 h-52 dark:border-[#8095d6] dark:border-4">
             <Image src="/profilepic.jpeg" alt="Profile Picture of Toni" width={210} height={210} style={{ objectFit: 'cover' }} />
           </div>
           <div>
-            <p className="text-2xl font-semibold text-gray-800 mb-2">Sustainable Syntax</p>
-            <p className="text-xl font-semibold text-gray-600 mb-4">Programming with a Passion for People, Planet, and Purring Progress.</p>
+            <p className="text-xl font-semibold text-gray-600 mb-4">Navigating the exciting world of AI with a commitment to ethical and sustainable solutions. In the realm of machine learning, I'm a seeker of inclusive data science approaches and a believer in tech for good.</p>
             <ContactButton />
           </div>
         </div>
@@ -40,44 +39,16 @@ const Home: React.FC<HomeProps> = ({ allPostsData }) => {
 
         <section id="about" className='anchor-offset'>
         <div className="h2-container"><h2>&#123; About Me &#125;</h2></div>
-        <p className="mb-10">
-            Embarking on the path of machine learning, I bring a fusion of analytical prowess and cultural empathy. My journey is defined by a relentless pursuit of knowledge and innovation, guided by the belief that technology, when harmonized with humanistic understanding, can unveil transformative solutions.
-        </p>
+        <p className="mb-2">It all started at 12, with a desire to shout my love for Nintendogs and Pokémon from the digital rooftops of my very own website. I discovered the rabbit hole into the wonderland of web development. Post-school, armed with a backpack and curiosity, I ventured off, eventually embracing the study of Ethnology/Cultural Anthropology after a volunteer service in Tanzania. Even amidst remote landscapes and deep talk interviews, the rabbit kept luring me back to tech jobs. It was precisely this unusual path that led me deep into the fascinating world of data.</p>
 
-        <h3>The Tech Enthusiast</h3>
-        <p className="mb-4">
-          In the ever-evolving world of technology, my journey is marked not just by proficiency, but by a relentless quest for learning. Beyond the confines of traditional education, I've honed my skills in Python, Machine Learning, and data analysis through self-directed exploration. Each day presents an opportunity to unravel new mysteries in code, refine algorithms, and push the boundaries of what's possible in AI.
-        </p>
+        <p className="mb-2">Now, as a devotee of creative writing, I must invoke a metaphor: Imagine data as an infinite, unsorted archive full of books. We humans are the archivists, curating which tales get the spotlight and which fade into dusty corners. But how does our perception influence which stories we elevate? Before we can fully answer that question, a machine starts its internship in the archive. Amidst this sea of narratives, it begins to weave patterns, extracting wisdom where we saw none. Its potential dawns on us. How far do we let this intern roam? Will it remain an assistant, become a colleague, or rise to be our boss? What tools and values do we impart to it on its journey?</p>
 
-        <h3>The Cultural Explorer</h3>
-        <p className="mb-4">
-          My academic endeavours in Ethnology and Cultural Anthropology have equipped me with critical skills highly pertinent to machine learning. From designing and managing research projects to ethical decision-making and interpreting complex data sets, my background ensures a comprehensive approach to problem-solving. These experiences have honed my ability to navigate diverse perspectives and cultural nuances, enriching my approach to developing globally-conscious AI solutions.
-        </p>
+        <p className="mb-2">These questions captivate me. I aim to use my unique blend of Cultural Anthropology and Computer Science to forge new paths in the world of Machine Learning - paths that are not only technically innovative but also socially and ecologically sustainable. Because, at the end of the day, it's not just about what machines can learn from data or what humans can learn from machines, but also how machines and humans can learn together.</p>
 
-        <h3>A Global Citizen</h3>
-        <p className="mb-4">
-          Each global sojourn has been more than just an adventure; it's been a chapter in understanding diverse human narratives. These experiences are integral to my approach to machine learning, providing a broad worldview essential for creating inclusive and ethical AI systems. Whether it's adapting to new environments or understanding varied human behaviours, these skills are invaluable in training and developing nuanced AI models.
-        </p>
+        <p className="mb-2">While contemplating these deeply philosophical questions, I enjoy curling up with my cats and an endless supply of tea, immersing myself in the pages of a captivating book, engaging in the art of human stacking through acrobatics, or coding to the energetic beats of drum and bass or the soothing rhythms of organic downtempo.</p>
 
-        <h3>Professionally Versatile</h3>
-        <p className="mb-4">
-          Whether it's web design, yoga instruction, or software development, I've embraced diverse roles that sharpened my skills and broadened my horizon. My stint at the DLR Project Management Agency and data analysis at the University of Bonn solidified my prowess in crunching numbers and deriving meaningful insights.
-        </p>
+        <p className="mb-2">If you're looking for a collaborator who blends a passion for machine learning with a zest for life, let's connect. My journey has taught me to think outside the box, a skill I bring to every project. Together, we can create AI solutions that are not only innovative but also grounded in real-world, human experiences.</p>
 
-        <h3>Driven by Purpose</h3>
-        <p className="mb-4">
-          I'm not just about codes and algorithms. My heart beats for sustainable and impactful technology. I see machine learning not just as a tool but as a medium to create technology that cares – for people, for the environment, and for the future.
-        </p>
-
-        <h3>Why Me?</h3>
-        <p className="mb-4">
-          Because I bring more than just technical skills. I bring a story – a blend of creativity, cultural insight, and tech-savvy. I'm on the lookout for opportunities where I can contribute to projects that are innovative, meaningful, and dare I say, a little bit quirky – much like myself.
-        </p>
-
-        <h3>Let's Connect</h3>
-        <p className="mb-4">
-          If you're intrigued by a coder with a flair for cultural narratives, a knack for sustainable solutions, and a portfolio that speaks volumes, let's chat. I'm all about making connections, sharing ideas, and brewing the next big thing in tech.
-        </p>
         <ContactButton />
       </section>
 
