@@ -7,7 +7,7 @@ import ExperienceSelection from '../components/ExperienceSelection';
 import FunSkills from '../components/FunSkills';
 import PortfolioGallery from '../components/PortfolioGallery';
 import Blog from '../components/Blog';
-import { getSortedPostsData } from '../lib/posts';
+import { getSortedPostsData } from '../../lib/posts';
 import { GetStaticProps } from 'next';
 
 type HomeProps = {
