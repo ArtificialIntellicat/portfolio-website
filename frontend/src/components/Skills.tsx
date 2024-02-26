@@ -1,13 +1,18 @@
-import React, { useState, useEffect, useRef } from 'react';
-import Chart from 'chart.js/auto';
+import React, { useState, useEffect, useRef, useCallback, useMemo } from 'react';
+import Chart, { Chart as ChartType } from 'chart.js/auto';
 
-const Skills = () => {
-  const [activeCategory, setActiveCategory] = useState('coding');
-  const chartRef = useRef(null);
-  const [chart, setChart] = useState(null);
+interface SkillItem {
+  name: string;
+  value: number;
+  category: string;
+}
 
-  // Skills with value
-  const skills = [
+const Skills: React.FC = () => {
+  const [activeCategory, setActiveCategory] = useState<string>('coding');
+  const chartRef = useRef<HTMLCanvasElement>(null);
+  const [chart, setChart] = useState<ChartType | null>(null);
+
+  const skills: SkillItem[] = useMemo(() => [
     { name: "Python", value: 5, category: "coding" },
     { name: "Machine Learning", value: 4, category: "data science" },
     { name: "PHP", value: 6, category: "coding" },
@@ -17,22 +22,23 @@ const Skills = () => {
     { name: "Java", value: 2, category: "coding" },
     { name: "SQL", value: 6, category: "coding" },
     { name: "JavaScript", value: 4, category: "coding" },
+    { name: "TypeScript", value: 2, category: "coding" },
     { name: "German", value: 10, category: "language" },
     { name: "English", value: 9, category: "language" },
     { name: "Spanish", value: 6, category: "language" },
     { name: "French", value: 4, category: "language" },
     { name: "Japanese", value: 2, category: "language" },
+    { name: "Kiswahili", value: 2, category: "language" },
     { name: "Project Management", value: 7, category: "data science" },
     { name: "Qualitative Data Analysis", value: 8, category: "data science" },
     { name: "Quantitative Data Analysis", value: 5, category: "data science" },
-    { name: "Intercultural Communication", value: 8, category: "language" },
     { name: "Wordpress", value: 9, category: "coding" },
     { name: "Laravel", value: 2, category: "coding" },
     { name: "Next.js", value: 5, category: "coding" }
-  ];
+  ], []);
 
   // Prepare data based on the active category
-  const prepareChartData = () => {
+  const prepareChartData = useCallback(() => {
     const filteredSkills = skills.filter(skill => skill.category === activeCategory);
     return {
       labels: filteredSkills.map(skill => skill.name),
@@ -47,7 +53,7 @@ const Skills = () => {
         barThickness: 35
       }]
     };
-  };
+  }, [activeCategory, skills]);
 
    // Initialize chart
    useEffect(() => {
@@ -68,15 +74,15 @@ const Skills = () => {
                     weight: 'bold',
                     size: 14,
                   },
-                callback: function(value) {
-                  if (value % 1 === 0) {
-                    return value;
+                  callback: function(value) {
+                    const numericValue = Number(value);
+                    if (numericValue % 1 === 0) {
+                      return numericValue;
+                    }
                   }
-                }
               },
               grid: {
                 display: true,
-                drawBorder: false,
                 drawOnChartArea: true,
                 drawTicks: false,
                 lineWidth: 1
@@ -108,7 +114,7 @@ const Skills = () => {
 
       setChart(newChart);
     }
-  }, [chartRef, chart]);
+  }, [chartRef, chart, prepareChartData]);
 
   // Update chart on category change
   useEffect(() => {
@@ -116,7 +122,7 @@ const Skills = () => {
       chart.data = prepareChartData();
       chart.update();
     }
-  }, [activeCategory]);
+  }, [activeCategory, chart, prepareChartData]);
 
   return (
     <div>

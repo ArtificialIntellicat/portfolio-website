@@ -23,7 +23,7 @@ const Impressum = () => {
 
         <b>2. Verlinkungen</b>
 
-        <p className='mb-4'>Die Webseite enthält Verlinkungen zu anderen Webseiten ("externe Links"). Diese Webseiten unterliegen der Haftung der jeweiligen Seitenbetreiber. Bei Verknüpfung der externen Links waren keine Rechtsverstöße ersichtlich. Auf die aktuelle und künftige Gestaltung der verlinkten Seiten hat der Anbieter keinen Einfluss. Die permanente Überprüfung der externen Links ist für den Anbieter ohne konkrete Hinweise auf Rechtsverstöße nicht zumutbar. Bei Bekanntwerden von Rechtsverstößen werden die betroffenen externen Links unverzüglich gelöscht.</p>
+        <p className='mb-4'>Die Webseite enthält Verlinkungen zu anderen Webseiten (&quot;externe Links&quot;). Diese Webseiten unterliegen der Haftung der jeweiligen Seitenbetreiber. Bei Verknüpfung der externen Links waren keine Rechtsverstöße ersichtlich. Auf die aktuelle und künftige Gestaltung der verlinkten Seiten hat der Anbieter keinen Einfluss. Die permanente Überprüfung der externen Links ist für den Anbieter ohne konkrete Hinweise auf Rechtsverstöße nicht zumutbar. Bei Bekanntwerden von Rechtsverstößen werden die betroffenen externen Links unverzüglich gelöscht.</p>
 
         <b>3. Urheberrecht / Leistungsschutzrecht</b>
 

@@ -5,8 +5,12 @@ import Footer from '../components/Footer';
 import Navigation from '../components/Navigation';
 import './globals.css';
 
-const Layout = ({ children, title = 'Toni Helesic' }) => {
+interface LayoutProps {
+  children: React.ReactNode;
+  title?: string;
+}
 
+const Layout: React.FC<LayoutProps> = ({ children, title = 'Toni Helesic' }) => {
   return (
     <div>
       <Head>
@@ -21,3 +25,4 @@ const Layout = ({ children, title = 'Toni Helesic' }) => {
 };
 
 export default Layout;
+

@@ -1,5 +1,6 @@
 'use client';
 import { useState } from 'react';
+import Link from 'next/link';
 import { useRouter } from 'next/router';
 import EmailIcon from './EmailIcon';
 import GitHubIcon from './GitHubIcon';
@@ -11,7 +12,8 @@ const Navigation: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const router = useRouter();
 
-  const handleNavigation = (anchor: string) => {
+  const handleNavigation = (anchor: string, e?: React.MouseEvent<HTMLAnchorElement>) => {
+    e?.preventDefault();
     const destination = `/${anchor}`;
     if (router.pathname !== '/') {
       router.push(destination);
@@ -32,18 +34,20 @@ const Navigation: React.FC = () => {
             </button>
           </div>
           <div className="items-center">
-            <ThemeToggle size={20} />
+            <ThemeToggle />
           </div>
         </div>
 
          {/* Mobile Menu (Visible when menu is open) */}
          <div className={`absolute top-full left-0 w-full bg-[#5470c8] dark:bg-[#4e56a7] md:hidden ${isMenuOpen ? 'block' : 'hidden'}`}>
           <div className="flex flex-col items-start py-2">
-            <a href="/" onClick={() => window.scrollTo(0, 0)} className="hover-effect py-1 px-2 cursor-pointer">Home</a>
-            <a onClick={() => handleNavigation('#about')} className="hover-effect py-1 px-2 cursor-pointer">About Me</a>
-            <a onClick={() => handleNavigation('#cv')} className="hover-effect py-1 px-2 cursor-pointer">CV</a>
-            <a onClick={() => handleNavigation('#portfolio')} className="hover-effect py-1 px-2 cursor-pointer">Portfolio</a>
-            <a onClick={() => handleNavigation('#blog')} className="hover-effect py-1 px-2 cursor-pointer">Blog</a>
+            <Link href="/">
+              <a onClick={() => window.scrollTo(0, 0)} className="hover-effect py-1 px-2 cursor-pointer">Home</a>
+            </Link>
+            <a onClick={(e) => handleNavigation('#about', e)} className="hover-effect py-1 px-2 cursor-pointer">About Me</a>
+            <a onClick={(e) => handleNavigation('#cv', e)} className="hover-effect py-1 px-2 cursor-pointer">CV</a>
+            <a onClick={(e) => handleNavigation('#portfolio', e)} className="hover-effect py-1 px-2 cursor-pointer">Portfolio</a>
+            <a onClick={(e) => handleNavigation('#blog', e)} className="hover-effect py-1 px-2 cursor-pointer">Blog</a>
           </div>
           <div className="flex justify-left py-2 px-2 gap-4">
             <EmailIcon className="icon-hover" />
@@ -56,11 +60,13 @@ const Navigation: React.FC = () => {
         <div className="flex-grow justify-center hidden md:flex">
           <div className="flex basis-1/4"></div>
           <div className="flex basis-1/2 justify-center gap-4">
-            <a href="/" onClick={() => window.scrollTo(0, 0)} className="hover-effect cursor-pointer">Home</a>
-            <a onClick={() => handleNavigation('#about')} className="hover-effect cursor-pointer">About Me</a>
-            <a onClick={() => handleNavigation('#cv')} className="hover-effect cursor-pointer">CV</a>
-            <a onClick={() => handleNavigation('#portfolio')} className="hover-effect cursor-pointer">Portfolio</a>
-            <a onClick={() => handleNavigation('#blog')} className="hover-effect cursor-pointer">Blog</a>
+            <Link href="/">
+              <a onClick={() => window.scrollTo(0, 0)} className="hover-effect cursor-pointer">Home</a>
+            </Link>
+            <a onClick={(e) => handleNavigation('#about', e)} className="hover-effect cursor-pointer">About Me</a>
+            <a onClick={(e) => handleNavigation('#cv', e)} className="hover-effect cursor-pointer">CV</a>
+            <a onClick={(e) => handleNavigation('#portfolio', e)} className="hover-effect cursor-pointer">Portfolio</a>
+            <a onClick={(e) => handleNavigation('#blog', e)} className="hover-effect cursor-pointer">Blog</a>
           </div>
           <div className="flex basis-1/4 gap-4 justify-end">
             <EmailIcon className="icon-hover" />

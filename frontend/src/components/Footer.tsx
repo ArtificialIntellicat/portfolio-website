@@ -12,14 +12,14 @@ const Footer: React.FC = () => {
         <LinkedInIcon className="icon-hover" />
       </div>
       <div className="flex justify-center space-x-4 mb-4">
-        <Link href="/impressum">
-          <a className="hover-effect">Impressum</a>
+        <Link href="/impressum" className="hover-effect">
+          Impressum
         </Link>
       </div>
       <p>&copy; {new Date().getFullYear()} Toni Helesic. All rights reserved.</p>
       <p>Powered by 
-        <Link href="https://nextjs.org">
-          <a className="hover-effect">Next.js</a>
+        <Link href="https://nextjs.org" className="hover-effect">
+          Next.js
         </Link>
       </p>
     </footer>

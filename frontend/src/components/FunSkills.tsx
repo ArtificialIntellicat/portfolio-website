@@ -1,7 +1,22 @@
 import React, { useState } from 'react';
 
+interface Milestone {
+  type: string;
+  date: string;
+  title: string;
+  company: string;
+  description: string;
+  skills: string[];
+  companyUrl?: string;
+}
+
+interface Skill {
+  name: string;
+  value: number;
+}
+
 const FunSkills = () => {
-  const [currentYear, setCurrentYear] = useState(2015); // Starting year
+  const [currentYear, setCurrentYear] = useState<number>(2015);
 
   // Experience Milestones
   const milestones = [
@@ -153,7 +168,7 @@ const FunSkills = () => {
   ];
 
   // Function to handle timeline progression
-  const handleTimelineProgress = (year) => {
+  const handleTimelineProgress = (year: number) => {
     setCurrentYear(year);
   };
 
@@ -162,21 +177,25 @@ const FunSkills = () => {
     <div className="skills-game">
       <p className='text-center'>A text-based interactive cv adventure is waiting to be born here ...</p>
       <div className="timeline">
-        {milestones.map(milestone => (
-          <button key={milestone.year} onClick={() => handleTimelineProgress(milestone.year)}>
-            {milestone.year}
+        {milestones.map((milestone, index) => (
+          <button key={index} onClick={() => handleTimelineProgress(2015 + index)}>
+            {2015 + index}
           </button>
         ))}
       </div>
       <div className="unlocked-skills">
-        {skills.filter(skill => milestones.some(milestone => milestone.year <= currentYear && milestone.unlockedSkills.includes(skill.name)))
-               .map(skill => (
-                 <div key={skill.name}>
-                   <h3>{skill.name}</h3>
-                   <p>Level: {skill.level}</p>
-                   {/* Additional skill details */}
-                 </div>
-               ))}
+        {skills.filter(skill => 
+          milestones.some(milestone => 
+            new Date(milestone.date).getFullYear() <= currentYear && 
+            milestone.skills?.includes(skill.name) // Use optional chaining to check for skills
+          )
+        ).map(skill => (
+          <div key={skill.name}>
+            <h3>{skill.name}</h3>
+            <p>Level: {skill.value}</p>
+            {/* Additional skill details */}
+          </div>
+        ))}
       </div>
     </div>
   );

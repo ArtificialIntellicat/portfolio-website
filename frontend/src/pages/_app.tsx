@@ -1,9 +1,8 @@
 import '../app/globals.css';
+import type { AppProps } from 'next/app';
 
-function PortfolioWebsite({ Component, pageProps }) {
-  return (
-      <Component {...pageProps} />
-  );
+function PortfolioWebsite({ Component, pageProps }: AppProps) {
+  return <Component {...pageProps} />;
 }
 
 export default PortfolioWebsite;

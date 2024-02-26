@@ -7,14 +7,16 @@ import ExperienceSelection from '../components/ExperienceSelection';
 import FunSkills from '../components/FunSkills';
 import PortfolioGallery from '../components/PortfolioGallery';
 import Blog from '../components/Blog';
-import { getSortedPostsData } from './blog-posts/posts';
+import { getSortedPostsData } from '../api/posts';
 import { GetStaticProps } from 'next';
 
 type HomeProps = {
   allPostsData: {
-    date: string;
-    title: string;
     id: string;
+    title: string;
+    date: string;
+    tldr: string;
+    thumbnail: string;
   }[];
 };
 
@@ -26,12 +28,12 @@ const Home: React.FC<HomeProps> = ({ allPostsData }) => {
       <section className="content-section">
       <section id="intro" className="text-center py-4">
         <div className="flex flex-col items-center gap-8">
-          <h1 className="text-5xl font-bold text-[#8095d6] toni">Hey, I'm Toni.</h1>
+          <h1 className="text-5xl font-bold text-[#8095d6] toni">Hey, I&apos;m Toni.</h1>
           <div className="rounded-full overflow-hidden w-52 h-52 dark:border-[#8095d6] dark:border-4">
             <Image src="/profilepic.jpeg" alt="Profile Picture of Toni" width={210} height={210} style={{ objectFit: 'cover' }} />
           </div>
           <div>
-            <p className="text-xl font-semibold text-gray-600 mb-4">Navigating the exciting world of AI with a commitment to ethical and sustainable solutions. In the realm of machine learning, I'm a seeker of inclusive data science approaches and a believer in tech for good.</p>
+            <p className="text-xl font-semibold text-gray-600 mb-4">Navigating the exciting world of AI with a commitment to ethical and sustainable solutions. In the realm of machine learning, I&apos;m a seeker of inclusive data science approaches and a believer in tech for good.</p>
             <ContactButton />
           </div>
         </div>
@@ -43,11 +45,11 @@ const Home: React.FC<HomeProps> = ({ allPostsData }) => {
 
         <p className="mb-2">Now, as a devotee of creative writing, I must invoke a metaphor: Imagine data as an infinite, unsorted archive full of books. We humans are the archivists, curating which tales get the spotlight and which fade into dusty corners. But how does our perception influence which stories we elevate? Before we can fully answer that question, a machine starts its internship in the archive. Amidst this sea of narratives, it begins to weave patterns, extracting wisdom where we saw none. Its potential dawns on us. How far do we let this intern roam? Will it remain an assistant, become a colleague, or rise to be our boss? What tools and values do we impart to it on its journey?</p>
 
-        <p className="mb-2">These questions captivate me. I aim to use my unique blend of Cultural Anthropology and Computer Science to forge new paths in the world of Machine Learning - paths that are not only technically innovative but also socially and ecologically sustainable. Because, at the end of the day, it's not just about what machines can learn from data or what humans can learn from machines, but also how machines and humans can learn together.</p>
+        <p className="mb-2">These questions captivate me. I aim to use my unique blend of Cultural Anthropology and Computer Science to forge new paths in the world of Machine Learning - paths that are not only technically innovative but also socially and ecologically sustainable. Because, at the end of the day, it&apos;s not just about what machines can learn from data or what humans can learn from machines, but also how machines and humans can learn together.</p>
 
         <p className="mb-2">While contemplating these deeply philosophical questions, I enjoy curling up with my cats and an endless supply of tea, immersing myself in the pages of a captivating book, engaging in the art of human stacking through acrobatics, or coding to the energetic beats of drum and bass or the soothing rhythms of organic downtempo.</p>
 
-        <p className="mb-2">If you're looking for a collaborator who blends a passion for machine learning with a zest for life, let's connect. My journey has taught me to think outside the box, a skill I bring to every project. Together, we can create AI solutions that are not only innovative but also grounded in real-world, human experiences.</p>
+        <p className="mb-2">If you&apos;re looking for a collaborator who blends a passion for machine learning with a zest for life, let&apos;s connect. My journey has taught me to think outside the box, a skill I bring to every project. Together, we can create AI solutions that are not only innovative but also grounded in real-world, human experiences.</p>
 
         <ContactButton />
       </section>
