@@ -100,7 +100,7 @@ const ExperienceSelection: React.FC = () => {
       skills: ["qualitative research", "project management", "japanese"]
     },
     {
-      title: "Exchange Semester at OLSOMET and Kulturstudier Hoi An",
+      title: "Exchange Semester at OSLOMET and Kulturstudier Hoi An",
       company: "Vietnam",
       date: "2018",
       description: "Development Studies Program",
