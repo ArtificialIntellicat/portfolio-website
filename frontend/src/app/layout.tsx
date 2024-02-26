@@ -1,8 +1,8 @@
 'use client';
 import React from 'react';
 import Head from 'next/head';
-import Footer from '../components/footer';
-import Navigation from '../components/navigation';
+import Footer from '../../compnents/footer';
+import Navigation from '../../components/navigation';
 import './globals.css';
 
 const Layout = ({ children, title = 'Toni Helesic' }) => {
