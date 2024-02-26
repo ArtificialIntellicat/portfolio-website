@@ -1,5 +1,5 @@
 import Layout from '../../app/layout';
-import { getAllPostIds, getPostData } from '../../../lib/posts';
+import { getAllPostIds, getPostData } from '../../lib/posts';
 import Link from 'next/link';
 import { FaArrowLeft } from 'react-icons/fa';
 import { format } from 'date-fns';
