@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Layout from '../app/Layout';
+import Layout from '../app/layout';
 import Image from 'next/image';
 import ContactButton from '../components/ContactButton';
 import Skills from '../components/Skills';
