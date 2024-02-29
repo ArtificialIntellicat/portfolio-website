@@ -13,13 +13,13 @@ interface Project {
 }
 
 const PortfolioGallery = () => {
-    const projects: Project[] = [
+  const projects: Project[] = [
         {
           title: "Cat Breed Classifier",
-          description: "A beginner's foray into machine learning...",
+          description: "A beginner's foray into machine learning, this project features a convolutional neural network to identify cat breeds from images. It highlights my initial steps in AI, focusing on practical application of Python and TensorFlow.",
           skills: ["Python", "TensorFlow", "Keras"],
           githubLink: "https://github.com/artificialintellicat/cat-breed-classifier",
-          thumbnail: "/images/portfolio-thumbnails/cat-breed-classifier-thumbnail.png"
+          thumbnail: "/portfolio-thumbnail/cat-breed-classifier-thumbnail.png"
         },
       ];
 
@@ -36,20 +36,18 @@ const PortfolioGallery = () => {
               ))}
             </div>
             <div className="flex items-center space-x-4">
-              <Link href={project.githubLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center blue-filter icon-hover">
+              <Link href={project.githubLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center blue-filter icon-hover" passHref>
                 <Image src="/github-white.svg" alt="GitHub" width={24} height={24} />
               </Link>
               {project.projectLink && (
-                <Link href={project.projectLink} className="text-[#8FA1DB] hover-effect dark:hover:text-[#d9dff3] inline-flex items-center">
-                    view project <FaArrowRight className="ml-2" />
+                <Link href={project.projectLink}  className="text-[#8FA1DB] hover-effect dark:hover:text-[#d9dff3] inline-flex items-center" passHref>
+                  view project <FaArrowRight className="ml-2" />
                 </Link>
               )}
             </div>
-            {project.thumbnail && (
-              <div className="flex-1 mt-4 md:mt-0 md:ml-4">
-                <Image src={project.thumbnail} alt={project.title} width={200} height={150} layout="responsive" className="rounded-lg" />
-              </div>
-            )}
+          </div>
+          <div className="flex-1 mt-4 md:mt-0 md:ml-4">
+            <Image src={project.thumbnail} alt={project.title} width={200} height={150} layout="responsive" className="rounded-lg" />
           </div>
         </div>
       ))}
