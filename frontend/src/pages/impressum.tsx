@@ -13,7 +13,6 @@ const Impressum = () => {
 
         <h3 className="text-xl font-semibold mt-6">Kontakt</h3>
         <p className="my-2">E-Mail: antonia[dot]helesic[at]gmail[dot]com</p>
-        {/* Include your phone number if you want to provide it */}
         
         <h3 className="text-xl font-semibold mt-6">Haftungsausschluss</h3>
 

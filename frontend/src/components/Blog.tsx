@@ -37,10 +37,8 @@ const Blog = ({ allPostsData }: { allPostsData: PostData[] }) => {
           <p className="text-gray-600 mb-4">{date ? format(new Date(date), 'd MMMM yyyy') : 'No date provided'}</p>
           <h3 className="text-xl text-[#7f90c4] mb-2">{title}</h3>
           <p className='mb-4'>{tldr}</p>
-          <Link href={`/blog-posts/${id}`}>
-            <a className="text-[#8FA1DB] hover-effect dark:hover:text-[#d9dff3] inline-flex items-center">
-              read more <FaArrowRight className="ml-1" />
-            </a>
+          <Link href={`/blog-posts/${id}`} className="text-[#8FA1DB] hover-effect dark:hover:text-[#d9dff3] inline-flex items-center">
+            read more <FaArrowRight className="ml-1" />
           </Link>
         </div>
       ))}
