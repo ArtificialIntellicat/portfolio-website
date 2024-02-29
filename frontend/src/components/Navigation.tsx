@@ -41,8 +41,8 @@ const Navigation: React.FC = () => {
          {/* Mobile Menu (Visible when menu is open) */}
          <div className={`absolute top-full left-0 w-full bg-[#5470c8] dark:bg-[#4e56a7] md:hidden ${isMenuOpen ? 'block' : 'hidden'}`}>
           <div className="flex flex-col items-start py-2">
-            <Link href="/">
-              <a onClick={() => window.scrollTo(0, 0)} className="hover-effect py-1 px-2 cursor-pointer">Home</a>
+            <Link href="/" onClick={() => window.scrollTo(0, 0)} className="hover-effect py-1 px-2 cursor-pointer">
+              Home
             </Link>
             <a onClick={(e) => handleNavigation('#about', e)} className="hover-effect py-1 px-2 cursor-pointer">About Me</a>
             <a onClick={(e) => handleNavigation('#cv', e)} className="hover-effect py-1 px-2 cursor-pointer">CV</a>
@@ -60,8 +60,8 @@ const Navigation: React.FC = () => {
         <div className="flex-grow justify-center hidden md:flex">
           <div className="flex basis-1/4"></div>
           <div className="flex basis-1/2 justify-center gap-4">
-            <Link href="/">
-              <a onClick={() => window.scrollTo(0, 0)} className="hover-effect cursor-pointer">Home</a>
+            <Link href="/" onClick={() => window.scrollTo(0, 0)} className="hover-effect cursor-pointer">
+              Home
             </Link>
             <a onClick={(e) => handleNavigation('#about', e)} className="hover-effect cursor-pointer">About Me</a>
             <a onClick={(e) => handleNavigation('#cv', e)} className="hover-effect cursor-pointer">CV</a>

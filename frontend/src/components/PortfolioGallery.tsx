@@ -19,14 +19,14 @@ const PortfolioGallery = () => {
           description: "A beginner's foray into machine learning, this project features a convolutional neural network to identify cat breeds from images. It highlights my initial steps in AI, focusing on practical application of Python and TensorFlow.",
           skills: ["Python", "TensorFlow", "Keras"],
           githubLink: "https://github.com/artificialintellicat/cat-breed-classifier",
-          thumbnail: "/portfolio-thumbnail/cat-breed-classifier-thumbnail.png"
+          thumbnail: "/portfolio-thumbnails/cat-breed-classifier-thumbnail.PNG"
         },
       ];
 
   return (
     <div>
       {projects.map((project, index) => (
-        <div key={index} className="flex flex-col md:flex-row items-center p-4 bg-[#e8ebf7] dark:bg-[#2b2f3f] rounded-lg">
+        <div key={index} className="flex flex-col md:flex-row items-center p-4 bg-[#e8ebf7] dark:bg-[#2b2f3f] rounded-lg max-h-80">
           <div className="flex-1">
             <p className="text-[#7f90c4] text-xl font-bold mb-2">{project.title}</p>
             <p className="text-gray-600 mb-4">{project.description}</p>
@@ -48,7 +48,7 @@ const PortfolioGallery = () => {
           </div>
           {project.thumbnail && (
             <div className="flex-1 mt-4 md:mt-0 md:ml-4">
-              <Image src={project.thumbnail} alt={project.title} width={200} height={150} layout="responsive" className="rounded-lg" />
+              <Image src={project.thumbnail} alt={project.title} width={250} height={200} layout="responsive" className="rounded-lg" />
             </div>
           )}
         </div>
