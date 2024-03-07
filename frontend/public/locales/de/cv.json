@@ -1,0 +1,147 @@
+{
+    "professional": [
+      {
+        "title": "Büromanagement",
+        "company": "NGO Global Coffee Platform",
+        "date": "Mär 2021 - Nov 2023",
+        "description": "Verwaltung, Eventmanagement, Reiseplanung, IT-Support.",
+        "companyUrl": "https://www.globalcoffeeplatform.org",
+        "skills": ["Eventmanagement", "Reiseplanung", "Interkulturelle Kommunikation"]
+      },
+      {
+        "title": "Twitter-Datenanalyse mit Python",
+        "company": "Universität Bonn",
+        "date": "Jan 2022 - Jun 2022",
+        "description": "Sentiment analysis und Untersuchung von Themenzusammenhängen zwischen COVID-19 und Theologie.",
+        "skills": ["Maschinelles Lernen", "Python"]
+      },
+      {
+        "title": "Datenauswertung in Forschungsprojekt",
+        "company": "DLR Projektträger Bonn, Abteilung für kulturelle und politische Bildung, Bildung für Nachhaltigkeit",
+        "date": "Aug 2021 - Sep 2021",
+        "description": "Auswertung von qualitativen Daten aus Forschung zu Handwerksförderprojekten für Kinder.",
+        "companyUrl": "https://projekttraeger.dlr.de",
+        "skills": ["Qualitative Datenanalyse"]
+      },
+      {
+        "title": "Softwareentwicklerin",
+        "company": "Integrated Analytics",
+        "date": "Feb 2020 - Feb 2021",
+        "description": "Frontend- und Backend-Entwicklung einer Webanwendung zur Erstellung von Landingpages für Unternehmen.",
+        "companyUrl": "https://www.integrated-analytics.de",
+        "skills": ["PHP", "Laravel", "JS", "Vue.js", "HTML", "CSS", "SQL", "Logodesign"]
+      },
+      {
+        "title": "Yogalehrerin",
+        "company": "Starpilates & Staryoga Bonn",
+        "date": "Feb 2020 - Apr 2020",
+        "companyUrl": "https://starpilates-staryoga.teachable.com",
+        "skills": ["Lehre"]
+      },
+      {
+        "title": "Yogalehrerin",
+        "company": "Die Senfbude Leipzig",
+        "date": "Jan 2019 - Jul 2019",
+        "companyUrl": "https://de-de.facebook.com/senfleipzig/",
+        "skills": ["Lehre"]
+      },
+      {
+        "title": "Webdesignerin",
+        "company": "optProjects",
+        "date": "Nov 2016 - Jan 2017",
+        "description": "Erstellung und Wartung von Websites und Webshops.",
+        "companyUrl": "https://www.optprojects.com",
+        "skills": ["PHP", "JS", "HTML", "CSS", "WordPress"]
+      }
+    ],
+    "academic": [
+      {
+        "title": "Master of Arts: Kulturanthropologie",
+        "company": "Universität Bonn",
+        "date": "Apr 2020 - Dez 2023",
+        "description": "Abschlussnote: 1,4",
+        "skills": ["Qualitative Forschung", "Projektmanagement"]
+      },
+      {
+        "title": "Bachelor of Arts: Ethnologie, Nebenfach Informatik",
+        "company": "Universität Leipzig",
+        "date": "Okt 2016 - Nov 2020",
+        "description": "Abschlussnote: 1,8",
+        "skills": ["Qualitative Forschung", "Projektmanagement"]
+      },
+      {
+        "title": "Abitur",
+        "company": "Ernst-Moritz-Arndt Gymnasium Bonn",
+        "date": "Jul 2015",
+        "description": "Abschlussnote: 1,2"
+      }
+    ],
+    "international": [
+      {
+        "title": "Auslandssemester an der Keio-Universität Tokyo",
+        "company": "Japan",
+        "date": "Sep 2022 - Feb 2023",
+        "description": "Kurse in Japanischer Sprache und Kultur, Qualitative Forschungsmethoden, Internationale Politik",
+        "skills": ["Qualitative Forschung", "Projektmanagement", "Japanisch"]
+      },
+      {
+        "title": "Auslandssemester an der OSLOMET und Kulturstudier Hoi An",
+        "company": "Vietnam",
+        "date": "Aug 2018 - Nov 2018",
+        "description": "Studienprogramm Development Studies",
+        "skills": ["Qualitative Forschung", "Projektmanagement"]
+      },
+      {
+        "title": "Auslandssemester an der Universidad San Ignacio de Loyola Cusco",
+        "company": "Peru",
+        "date": "Aug 2017 - Nov 2017",
+        "description": "Kurse in Spanisch, Quechua, Biodiversität Perus und Fotografie",
+        "skills": ["Spanisch", "Quechua", "Fotografie"]
+      },
+      {
+        "title": "Freiwilligendienst mit Caritas",
+        "company": "Tansania",
+        "date": "Aug 2015 - Jun 2016",
+        "description": "Unterricht von Lesen, Mathematik und Schreiben in Kiswahili in einem Kindergarten",
+        "skills": ["Projektmanagement", "Lehre"]
+      },
+      {
+        "title": "Auslandsjahr am Blackpool Sixthform College",
+        "company": "England",
+        "date": "Aug 2012 - Jul 2013",
+        "description": "Kurse in Creative Media Production, Drama und English",
+        "skills": ["Filmproduktion"]
+      }
+    ],
+    "skills": {
+      "coding": [
+        { "name": "Python", "value": 5 },
+        { "name": "PHP", "value": 6 },
+        { "name": "HTML / CSS", "value": 10 },
+        { "name": "Flask", "value": 5 },
+        { "name": "Vue", "value": 4 },
+        { "name": "Java", "value": 2 },
+        { "name": "SQL", "value": 6 },
+        { "name": "JavaScript", "value": 4 },
+        { "name": "TypeScript", "value": 2 },
+        { "name": "Wordpress", "value": 9 },
+        { "name": "Laravel", "value": 2 },
+        { "name": "Next.js", "value": 5 }
+      ],
+      "data science": [
+        { "name": "Maschinelles Lernen", "value": 4 },
+        { "name": "Projektmanagement", "value": 7 },
+        { "name": "Qualitative Datenanalyse", "value": 8 },
+        { "name": "Quantitative Datenanalyse", "value": 5 }
+      ],
+      "language": [
+        { "name": "Deutsch", "value": 10 },
+        { "name": "Englisch", "value": 9 },
+        { "name": "Spanisch", "value": 6 },
+        { "name": "Französisch", "value": 4 },
+        { "name": "Japanisch", "value": 2 },
+        { "name": "Kiswahili", "value": 2 }
+      ]
+    }    
+  }
+  

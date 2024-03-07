@@ -6,9 +6,12 @@ import EmailIcon from './EmailIcon';
 import GitHubIcon from './GitHubIcon';
 import LinkedInIcon from './LinkedInIcon';
 import ThemeToggle from './ThemeToggle';
+import LangaugeSwitcher from './LanguageSwitcher';
 import { IoMenu, IoClose } from "react-icons/io5";
+import { useTranslation } from 'next-i18next';
 
 const Navigation: React.FC = () => {
+  const { t } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const router = useRouter();
 
@@ -34,6 +37,7 @@ const Navigation: React.FC = () => {
             </button>
           </div>
           <div className="items-center">
+            <LangaugeSwitcher />
             <ThemeToggle />
           </div>
         </div>
@@ -44,7 +48,7 @@ const Navigation: React.FC = () => {
             <Link href="/" onClick={() => window.scrollTo(0, 0)} className="hover-effect py-1 px-2 cursor-pointer">
               Home
             </Link>
-            <a onClick={(e) => handleNavigation('#about', e)} className="hover-effect py-1 px-2 cursor-pointer">About Me</a>
+            <a onClick={(e) => handleNavigation('#about', e)} className="hover-effect py-1 px-2 cursor-pointer">{t('common:h-aboutme')}</a>
             <a onClick={(e) => handleNavigation('#cv', e)} className="hover-effect py-1 px-2 cursor-pointer">CV</a>
             <a onClick={(e) => handleNavigation('#portfolio', e)} className="hover-effect py-1 px-2 cursor-pointer">Portfolio</a>
             <a onClick={(e) => handleNavigation('#blog', e)} className="hover-effect py-1 px-2 cursor-pointer">Blog</a>
@@ -69,6 +73,9 @@ const Navigation: React.FC = () => {
             <a onClick={(e) => handleNavigation('#blog', e)} className="hover-effect cursor-pointer">Blog</a>
           </div>
           <div className="flex basis-1/4 gap-4 justify-end">
+            <div className="border-r-2 border-white px-2 items-center">
+              <LangaugeSwitcher />
+            </div>
             <EmailIcon className="icon-hover" />
             <GitHubIcon className="icon-hover" />
             <LinkedInIcon className="icon-hover" />

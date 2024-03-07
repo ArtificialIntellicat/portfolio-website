@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { FaArrowRight } from 'react-icons/fa';
 import Link from 'next/link';
 import { format } from 'date-fns';
+import { useTranslation } from 'next-i18next';
 
 interface PostData {
   id: string;
@@ -16,11 +17,12 @@ interface PostData {
 }
 
 const Blog = ({ allPostsData }: { allPostsData: PostData[] }) => {
+  const { t } = useTranslation();
   // Check if allPostsData is provided and not empty
   if (!allPostsData || allPostsData.length === 0) {
     return (
       <div className="p-6 bg-[#e8ebf7] dark:bg-[#2b2f3f] rounded-lg text-center">
-        <p className="text-xl text-gray-800">coming soon ...</p>
+        <p className="text-xl text-gray-800">{t('common:coming-soon')}</p>
       </div>
     );
   }
