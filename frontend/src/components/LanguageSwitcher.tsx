@@ -2,15 +2,18 @@ import { useRouter } from 'next/router';
 
 const LanguageSwitcher: React.FC = () => {
   const router = useRouter();
+  const { locale, pathname, asPath } = router;
 
-  const switchLanguage = (locale: string) => {
-    router.push(router.pathname, router.asPath, { locale });
+  const switchLanguage = () => {
+    const newLocale = locale === 'en' ? 'de' : 'en';
+    router.push(pathname, asPath, { locale: newLocale });
   };
 
   return (
-    <div className="text-lg">
-      <button onClick={() => switchLanguage('en')} className="px-2">EN</button>| 
-      <button onClick={() => switchLanguage('de')} className="px-2">DE</button>
+    <div className="text-xl">
+      <button onClick={switchLanguage} className="px-2 hover-effect">
+        {locale === 'en' ? 'DE' : 'EN'}
+      </button>
     </div>
   );
 };

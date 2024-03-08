@@ -67,7 +67,7 @@ const Navigation: React.FC = () => {
             <Link href="/" onClick={() => window.scrollTo(0, 0)} className="hover-effect cursor-pointer">
               Home
             </Link>
-            <a onClick={(e) => handleNavigation('#about', e)} className="hover-effect cursor-pointer">About Me</a>
+            <a onClick={(e) => handleNavigation('#about', e)} className="hover-effect cursor-pointer">{t('common:h-aboutme')}</a>
             <a onClick={(e) => handleNavigation('#cv', e)} className="hover-effect cursor-pointer">CV</a>
             <a onClick={(e) => handleNavigation('#portfolio', e)} className="hover-effect cursor-pointer">Portfolio</a>
             <a onClick={(e) => handleNavigation('#blog', e)} className="hover-effect cursor-pointer">Blog</a>
