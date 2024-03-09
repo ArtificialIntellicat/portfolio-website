@@ -3,6 +3,7 @@ import React from 'react';
 import Head from 'next/head';
 import Footer from '../components/Footer';
 import Navigation from '../components/Navigation';
+import CookieConsentBanner from '../components/CookieConsentBanner';
 import './globals.css';
 
 interface LayoutProps {
@@ -17,6 +18,7 @@ const Layout: React.FC<LayoutProps> = ({ children, title = 'Toni Helesic' }) => 
         <title>{title}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <CookieConsentBanner />
       <Navigation />
       <main className="pt-16">{children}</main>
       <Footer />

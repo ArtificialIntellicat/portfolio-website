@@ -17,10 +17,13 @@ const Footer: React.FC = () => {
         </Link>
       </div>
       <p>&copy; {new Date().getFullYear()} Toni Helesic. All rights reserved.</p>
-      <p>Powered by 
+      <p>Powered by&nbsp; 
         <Link href="https://nextjs.org" className="hover-effect">
           Next.js
-        </Link>
+        </Link>. Deployed by&nbsp; 
+        <Link href="https://vercel.com/" className="hover-effect">
+          Vercel
+        </Link>.
       </p>
     </footer>
   );

@@ -1,7 +1,11 @@
 import React from 'react';
 import Layout from '../app/layout';
+import { useTranslation } from 'next-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { GetStaticPropsContext } from 'next';
 
 const Impressum = () => {
+  const { t } = useTranslation();
   return (
     <Layout>
       <div className="content-section mx-auto my-8 p-4">
@@ -40,5 +44,11 @@ const Impressum = () => {
     </Layout>
   );
 };
+
+export const getStaticProps = async ({ locale }: GetStaticPropsContext) => ({
+  props: {
+    ...(await serverSideTranslations(locale as string, ['common']))
+  },
+});
 
 export default Impressum;
