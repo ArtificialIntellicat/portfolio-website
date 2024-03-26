@@ -13,7 +13,7 @@
         "company": "Universität Bonn",
         "date": "Jan 2022 - Jun 2022",
         "description": "Sentiment analysis und Untersuchung von Themenzusammenhängen zwischen COVID-19 und Theologie.",
-        "skills": ["Maschinelles Lernen", "Python"]
+        "skills": ["Machine Learning", "Python"]
       },
       {
         "title": "Datenauswertung in Forschungsprojekt",
@@ -55,6 +55,14 @@
       }
     ],
     "academic": [
+      {
+        "title": "Data Scientist: Machine Learning Career Path Kurs",
+        "company": "Codecademy",
+        "date": "Jan 2024 - Mär 2024",
+        "description": "Codecademy Pro Career Path Kurs zum Einstieg in die Karriere als Data Scientist mit Machine Learning Spezialisierung.",
+        "companyUrl": "https://portfolio-website-jade-kappa.vercel.app/data_scientist_certificate.pdf",
+        "skills": ["Machine Learning", "Python", "SQL", "Data Cleaning", "pandas", "skikit-learn", "Statistik", "Datenvisualisierung", "Neuronale Netzwerke"]
+      },
       {
         "title": "Master of Arts: Kulturanthropologie",
         "company": "Universität Bonn",

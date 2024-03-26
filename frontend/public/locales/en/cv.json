@@ -56,6 +56,14 @@
     ],
     "academic": [
         {
+          "title": "Data Scientist: Machine Learning Career Path Course",
+          "company": "Codecademy",
+          "date": "Jan 2024 - Mar 2024",
+          "description": "Codecademy Pro Career Path Course to become a Data Scientist with Machine Learning specialization.",
+          "companyUrl": "https://portfolio-website-jade-kappa.vercel.app/data_scientist_certificate.pdf",
+          "skills": ["Machine Learning", "Python", "SQL", "Data Cleaning", "pandas", "skikit-learn", "Statistics", "Data Visualization", "Neural Networks"]
+        },
+        {
         "title": "Master of Arts: Cultural Anthropology",
         "company": "University of Bonn",
         "date": "Apr 2020 - Dec 2023",
