@@ -1,6 +1,6 @@
 ---
 title: "Webapp „Stadtpflanzen“ zur Förderung von gesellschaftlichem Engagement in Grünanlagen"
-date: "2024-03-20"
+date: "2024-03-26"
 skills: ["Machine Learning", "Python", "Data Collection", "Flask", “sentiment analysis”, “topic modelling”, “Projektplanung”, “Projektmanagement”]
 githubLink: "https://github.com/ArtificialIntellicat/green-space-discovery"
 projectLink: "https://stadtpflanzen-3fed77b30e89.herokuapp.com"
