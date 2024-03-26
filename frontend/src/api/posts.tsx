@@ -36,7 +36,7 @@ export function getSortedPostsData(): BlogPost[] {
       date: matterResult.data.date || 'Default Date',
       content: matterResult.content,
       tldr: tldr,
-      thumbnail: matterResult.data.thumbnail,
+      thumbnail: matterResult.data.thumbnail || null,
     };
 
     if (!post.id || !post.title || !post.date) {
