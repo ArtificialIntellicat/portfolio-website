@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { FaArrowRight } from 'react-icons/fa';
 import Link from 'next/link';
@@ -14,10 +14,30 @@ interface PostData {
   skills?: string[];
   githubLink?: string;
   projectLink?: string;
+  locale?: string;
 }
 
-const Blog = ({ allPostsData }: { allPostsData: PostData[] }) => {
-  const { t } = useTranslation();
+const Blog = () => {
+  const { t, i18n } = useTranslation();
+  const [allPostsData, setAllPostsData] = useState<PostData[]>([]);
+
+  useEffect(() => {
+    fetch(`/api/posts/${i18n.language}`)
+      .then(response => response.json())
+      .then(data => {
+        if (!('error' in data)) {
+          setAllPostsData(data);
+        } else {
+          console.error(data.error);
+          setAllPostsData([]);
+        }
+      })
+      .catch(error => {
+        console.error('Failed to fetch posts:', error);
+        setAllPostsData([]);
+      });
+  }, [i18n.language]);
+
   // Check if allPostsData is provided and not empty
   if (!allPostsData || allPostsData.length === 0) {
     return (
@@ -36,14 +56,19 @@ const Blog = ({ allPostsData }: { allPostsData: PostData[] }) => {
               <Image src={thumbnail} alt={title} layout="fill" className="rounded-lg object-cover" />
             </div>
           ) : null}
-          <p className="text-gray-600 mb-4">{date ? format(new Date(date), 'd MMMM yyyy') : 'No date provided'}</p>
+          <p className="text-gray-400 date">{date ? format(new Date(date), 'd MMMM yyyy') : 'No date provided'}</p>
           <h3 className="text-xl text-[#7f90c4] mb-2">{title}</h3>
           <p className='mb-4'>{tldr}</p>
-          <Link href={`/blog-posts/${id}`} className="text-[#8FA1DB] hover-effect dark:hover:text-[#d9dff3] inline-flex items-center">
-            read more <FaArrowRight className="ml-1" />
+          <Link href={`/${i18n.language}/${id}`} className="text-[#8FA1DB] hover-effect dark:hover:text-[#d9dff3] inline-flex items-center">
+            {t('common:read-more')} <FaArrowRight className="ml-1" />
           </Link>
         </div>
       ))}
+      <style jsx>{`
+        .date {
+            margin-bottom: -20px;
+        }
+    `}</style>
     </div>
   );
 };

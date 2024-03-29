@@ -1,18 +1,19 @@
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
+import { useTranslation } from 'next-i18next';
 
 const LanguageSwitcher: React.FC = () => {
+  const { i18n } = useTranslation();
   const router = useRouter();
-  const { locale, pathname, asPath } = router;
 
   const switchLanguage = () => {
-    const newLocale = locale === 'en' ? 'de' : 'en';
-    router.push(pathname, asPath, { locale: newLocale });
+    const newLocale = i18n.language === 'en' ? 'de' : 'en';
+    i18n.changeLanguage(newLocale);
   };
 
   return (
     <div className="text-xl">
       <button onClick={switchLanguage} className="px-2 hover-effect">
-        {locale === 'en' ? 'DE' : 'EN'}
+        {i18n.language === 'en' ? 'DE' : 'EN'}
       </button>
     </div>
   );

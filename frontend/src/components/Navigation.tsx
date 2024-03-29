@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
+import { useRouter, usePathname } from 'next/navigation';
 import EmailIcon from './EmailIcon';
 import GitHubIcon from './GitHubIcon';
 import LinkedInIcon from './LinkedInIcon';
@@ -14,11 +14,12 @@ const Navigation: React.FC = () => {
   const { t } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const router = useRouter();
+  const pathname = usePathname();
 
   const handleNavigation = (anchor: string, e?: React.MouseEvent<HTMLAnchorElement>) => {
     e?.preventDefault();
     const destination = `/${anchor}`;
-    if (router.pathname !== '/') {
+    if (pathname !== '/') {
       router.push(destination);
     } else {
       document.querySelector(anchor)?.scrollIntoView({ behavior: 'smooth' });

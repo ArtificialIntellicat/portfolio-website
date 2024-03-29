@@ -7,7 +7,7 @@ import ExperienceSelection from '../components/ExperienceSelection';
 import FunSkills from '../components/FunSkills';
 import PortfolioGallery from '../components/PortfolioGallery';
 import Blog from '../components/Blog';
-import { getSortedPostsData } from '../api/posts';
+import { getSortedPostsData } from './api/posts/posts';
 import { GetStaticProps } from 'next';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
@@ -118,7 +118,7 @@ const Home: React.FC<HomeProps> = ({ allPostsData }) => {
 };
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
-  const allPostsData = getSortedPostsData();
+  const allPostsData = getSortedPostsData(locale);
   return {
     props: {
       allPostsData,
