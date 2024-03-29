@@ -17,6 +17,10 @@ interface PostData {
   locale?: string;
 }
 
+interface BlogProps {
+  allPostsData?: PostData[];
+}
+
 const Blog = () => {
   const { t, i18n } = useTranslation();
   const [allPostsData, setAllPostsData] = useState<PostData[]>([]);

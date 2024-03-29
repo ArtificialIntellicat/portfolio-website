@@ -85,7 +85,7 @@ const Home: React.FC<HomeProps> = ({ allPostsData }) => {
 
         <section id="blog" className='mt-10 anchor-offset'>
         <div className="h2-container py-5"><h2>&#123; Blog &#125;</h2></div>
-          <Blog allPostsData={allPostsData} />
+          <Blog />
         </section>
       </section>
       <style jsx>{`
@@ -118,11 +118,9 @@ const Home: React.FC<HomeProps> = ({ allPostsData }) => {
 };
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
-  const allPostsData = getSortedPostsData(locale);
   return {
     props: {
-      allPostsData,
-      ...(await serverSideTranslations(locale!, ['common', 'aboutme', 'cv'])),
+      ...(await serverSideTranslations(locale ?? 'en', ['common', 'aboutme', 'cv'])),
     },
   };
 };
