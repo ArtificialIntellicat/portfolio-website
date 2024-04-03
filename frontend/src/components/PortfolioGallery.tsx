@@ -47,7 +47,7 @@ const PortfolioGallery = () => {
             </div>
           </div>
           {project.thumbnail && (
-            <div className="flex-1 mt-4 md:mt-0 md:ml-4">
+            <div className="flex-1 mt-4 md:mt-0 md:ml-4 hidden md:block">
               <Image src={project.thumbnail} alt={project.title} width={250} height={200} layout="responsive" className="rounded-lg" />
             </div>
           )}

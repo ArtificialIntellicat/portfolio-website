@@ -8,15 +8,25 @@
   --text-color: #414b5c;
 }
 
+body {
+  --background-color: #f0f4f8;
+  --text-color: #414b5c;
+}
+
 /* Dark Theme */
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background-color: #333;
     --text-color: #fff;
   }
-}
+} */
 
 .dark {
+  --background-color: #333;
+  --text-color: #d8d8d8;
+}
+
+.dark body {
   --background-color: #333;
   --text-color: #d8d8d8;
 }
