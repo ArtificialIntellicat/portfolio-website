@@ -54,7 +54,7 @@ const Blog = () => {
   return (
     <div className="p-6 bg-[#e8ebf7] dark:bg-[#2b2f3f] rounded-lg">
       {allPostsData.map(({ id, title, date, tldr, thumbnail }) => (
-        <div key={id} className="relative h-80">
+        <div key={id} className="relative h-96 md:h-80">
           {thumbnail ? (
             <div className="absolute top-4 right-4 w-40 h-30">
               <Image src={thumbnail} alt={title} layout="fill" className="rounded-lg object-cover" />
