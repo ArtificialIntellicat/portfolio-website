@@ -39,6 +39,8 @@ const Navigation: React.FC = () => {
           </div>
           <div className="items-center">
             <LangaugeSwitcher />
+          </div>
+          <div className="items-center">
             <ThemeToggle />
           </div>
         </div>
