@@ -18,12 +18,14 @@ const PortfolioGallery = () => {
           title: "Website Praxis Helesic",
           description: "Commissioned website project for a psychotherapist.",
           skills: ["WordPress", "JavaScript", "HTML", "CSS", "SQL", "PHP"],
+          githubLink: "",
           thumbnail: "/portfolio-thumbnails/praxis-helesic.PNG"
         },
         {
           title: "Website RKM Büroservices",
           description: "Commissioned website project for a legal assistant.",
           skills: ["WordPress", "JavaScript", "HTML", "CSS", "SQL", "PHP"],
+          githubLink: "",
           thumbnail: "/portfolio-thumbnails/rkm.PNG"
         },
         {
@@ -37,6 +39,7 @@ const PortfolioGallery = () => {
           title: "Website Heike Schäfer-Göbel",
           description: "One of my first commissioned website projects.",
           skills: ["WordPress", "JavaScript", "HTML", "CSS", "SQL", "PHP"],
+          githubLink: "",
           thumbnail: "/portfolio-thumbnails/schaefer-goebel.PNG"
         },
       ];
