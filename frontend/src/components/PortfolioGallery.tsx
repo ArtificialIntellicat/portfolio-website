@@ -19,14 +19,14 @@ const PortfolioGallery = () => {
           description: "Commissioned website project for a psychotherapist.",
           skills: ["WordPress", "JavaScript", "HTML", "CSS", "SQL", "PHP"],
           githubLink: "",
-          thumbnail: "/portfolio-thumbnails/praxis-helesic.PNG"
+          thumbnail: "/portfolio-thumbnails/praxis-helesic.png"
         },
         {
           title: "Website RKM Büroservices",
           description: "Commissioned website project for a legal assistant.",
           skills: ["WordPress", "JavaScript", "HTML", "CSS", "SQL", "PHP"],
           githubLink: "",
-          thumbnail: "/portfolio-thumbnails/rkm.PNG"
+          thumbnail: "/portfolio-thumbnails/rkm.png"
         },
         {
           title: "Cat Breed Classifier",
@@ -40,7 +40,7 @@ const PortfolioGallery = () => {
           description: "One of my first commissioned website projects.",
           skills: ["WordPress", "JavaScript", "HTML", "CSS", "SQL", "PHP"],
           githubLink: "",
-          thumbnail: "/portfolio-thumbnails/schaefer-goebel.PNG"
+          thumbnail: "/portfolio-thumbnails/schaefer-goebel.png"
         },
       ];
 
