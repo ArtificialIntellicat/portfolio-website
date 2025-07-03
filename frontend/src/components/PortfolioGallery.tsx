@@ -15,11 +15,29 @@ interface Project {
 const PortfolioGallery = () => {
   const projects: Project[] = [
         {
+          title: "Website Praxis Helesic",
+          description: "Commissioned website project for a psychotherapist.",
+          skills: ["WordPress", "JavaScript", "HTML", "CSS", "SQL", "PHP"],
+          thumbnail: "/portfolio-thumbnails/praxis-helesic.PNG"
+        },
+        {
+          title: "Website RKM Büroservices",
+          description: "Commissioned website project for a legal assistant.",
+          skills: ["WordPress", "JavaScript", "HTML", "CSS", "SQL", "PHP"],
+          thumbnail: "/portfolio-thumbnails/rkm.PNG"
+        },
+        {
           title: "Cat Breed Classifier",
           description: "A beginner's foray into machine learning, this project features a convolutional neural network to identify cat breeds from images. It highlights my initial steps in AI, focusing on practical application of Python and TensorFlow.",
           skills: ["Python", "TensorFlow", "Keras"],
           githubLink: "https://github.com/artificialintellicat/cat-breed-classifier",
           thumbnail: "/portfolio-thumbnails/cat-breed-classifier-thumbnail.PNG"
+        },
+        {
+          title: "Website Heike Schäfer-Göbel",
+          description: "One of my first commissioned website projects.",
+          skills: ["WordPress", "JavaScript", "HTML", "CSS", "SQL", "PHP"],
+          thumbnail: "/portfolio-thumbnails/schaefer-goebel.PNG"
         },
       ];
 
