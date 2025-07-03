@@ -1,6 +1,14 @@
 {
     "professional": [
         {
+        "title": "Technical Business Analyst",
+        "company": "Assfinet GmbH",
+        "date": "May 2024 - today",
+        "description": "Business Analysis, IT project management, scripting with JScript and IT support.",
+        "companyUrl": "https://www.assfinet.de/",
+        "skills": ["business analysis", "it project management", "jscript", "jira", "scrum", "concepts", "customer support"]
+        },
+        {
         "title": "Office Management",
         "company": "NGO Global Coffee Platform",
         "date": "Mar 2021 - Nov 2023",
